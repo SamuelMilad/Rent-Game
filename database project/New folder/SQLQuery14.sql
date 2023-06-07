@@ -1,0 +1,37 @@
+USE [FRMORCOUS]
+GO
+
+/****** Object:  Table [dbo].[devolop]    Script Date: 5/30/2022 11:17:31 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[devolop](
+	[devolop_id] [int] NOT NULL,
+	[game_id] [int] NULL,
+	[date1] [datetime] NULL,
+	[vendor_id] [int] NULL,
+ CONSTRAINT [PK_devolop] PRIMARY KEY CLUSTERED 
+(
+	[devolop_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[devolop]  WITH CHECK ADD  CONSTRAINT [FK_devolop_GAME] FOREIGN KEY([game_id])
+REFERENCES [dbo].[GAME] ([GAME_ID])
+GO
+
+ALTER TABLE [dbo].[devolop] CHECK CONSTRAINT [FK_devolop_GAME]
+GO
+
+ALTER TABLE [dbo].[devolop]  WITH CHECK ADD  CONSTRAINT [FK_devolop_VENDOR] FOREIGN KEY([vendor_id])
+REFERENCES [dbo].[VENDOR] ([VENDRO_ID])
+GO
+
+ALTER TABLE [dbo].[devolop] CHECK CONSTRAINT [FK_devolop_VENDOR]
+GO
+
+

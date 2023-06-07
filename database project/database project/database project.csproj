@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56450169-3346-4785-927E-DABB693B104D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>database_project</RootNamespace>
+    <AssemblyName>database project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\Desktop\data base project.cs" />
+    <Compile Include="..\..\..\..\Desktop\data base project.Designer.cs">
+      <DependentUpon>data base project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adding game .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adding game .Designer.cs">
+      <DependentUpon>Adding game .cs</DependentUpon>
+    </Compile>
+    <Compile Include="addmi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addmi.Designer.cs">
+      <DependentUpon>addmi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="browes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="browes.Designer.cs">
+      <DependentUpon>browes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="browse1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="browse1.Designer.cs">
+      <DependentUpon>browse1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMARCOUS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FRMARCOUS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRMORCOUSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FRMORCOUSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRMORCOUSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FRMORCOUSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRMORCOUSDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FRMORCOUSDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fr_marcous1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fr_marcous1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LOGINFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGINFORM.Designer.cs">
+      <DependentUpon>LOGINFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QUIERS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QUIERS.Designer.cs">
+      <DependentUpon>QUIERS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rent.Designer.cs">
+      <DependentUpon>Rent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Return.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Return.Designer.cs">
+      <DependentUpon>Return.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sign up user ad .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sign up user ad .Designer.cs">
+      <DependentUpon>sign up user ad .cs</DependentUpon>
+    </Compile>
+    <Compile Include="sign up ad .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sign up ad .Designer.cs">
+      <DependentUpon>sign up ad .cs</DependentUpon>
+    </Compile>
+    <Compile Include="sign up user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sign up user.Designer.cs">
+      <DependentUpon>sign up user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sign up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sign up.Designer.cs">
+      <DependentUpon>sign up.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update.info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update.info.Designer.cs">
+      <DependentUpon>update.info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user.Designer.cs">
+      <DependentUpon>user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vendor sign up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vendor sign up.Designer.cs">
+      <DependentUpon>vendor sign up.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vendorlogincs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vendorlogincs.Designer.cs">
+      <DependentUpon>vendorlogincs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vendorupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vendorupdate.Designer.cs">
+      <DependentUpon>vendorupdate.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="..\..\..\..\Desktop\data base project.resx">
+      <DependentUpon>data base project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adding game .resx">
+      <DependentUpon>Adding game .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addmi.resx">
+      <DependentUpon>addmi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="browes.resx">
+      <DependentUpon>browes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="browse1.resx">
+      <DependentUpon>browse1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGINFORM.resx">
+      <DependentUpon>LOGINFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QUIERS.resx">
+      <DependentUpon>QUIERS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rent.resx">
+      <DependentUpon>Rent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Return.resx">
+      <DependentUpon>Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sign up user ad .resx">
+      <DependentUpon>sign up user ad .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sign up ad .resx">
+      <DependentUpon>sign up ad .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sign up user.resx">
+      <DependentUpon>sign up user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sign up.resx">
+      <DependentUpon>sign up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update.info.resx">
+      <DependentUpon>update.info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user.resx">
+      <DependentUpon>user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vendor sign up.resx">
+      <DependentUpon>vendor sign up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vendorlogincs.resx">
+      <DependentUpon>vendorlogincs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vendorupdate.resx">
+      <DependentUpon>vendorupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="FRMARCOUS.xsc">
+      <DependentUpon>FRMARCOUS.xsd</DependentUpon>
+    </None>
+    <None Include="FRMARCOUS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FRMARCOUS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FRMARCOUS.xss">
+      <DependentUpon>FRMARCOUS.xsd</DependentUpon>
+    </None>
+    <None Include="FRMORCOUSDataSet.xsc">
+      <DependentUpon>FRMORCOUSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FRMORCOUSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FRMORCOUSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FRMORCOUSDataSet.xss">
+      <DependentUpon>FRMORCOUSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FRMORCOUSDataSet1.xsc">
+      <DependentUpon>FRMORCOUSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FRMORCOUSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FRMORCOUSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FRMORCOUSDataSet1.xss">
+      <DependentUpon>FRMORCOUSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FRMORCOUSDataSet2.xsc">
+      <DependentUpon>FRMORCOUSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FRMORCOUSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FRMORCOUSDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FRMORCOUSDataSet2.xss">
+      <DependentUpon>FRMORCOUSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="fr_marcous1.xsc">
+      <DependentUpon>fr_marcous1.xsd</DependentUpon>
+    </None>
+    <None Include="fr_marcous1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fr_marcous1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fr_marcous1.xss">
+      <DependentUpon>fr_marcous1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diesel_blog_epic-games-store-update_EGS_Social_Update_News-2560x1440-128a69890d92407b815582c1deba54450e5645f9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fire-exit-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-arrow-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-math-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-browse-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-rent-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-left-2-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-64.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

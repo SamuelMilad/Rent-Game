@@ -1,0 +1,73 @@
+SELECT dbo.CLIENT.FIRSRT_NAMEC, dbo.CLIENT.LAST_NAMEC, dbo.CLIENT.CLIENT_ID, dbo.RENT.RentDate
+FROM     dbo.CLIENT LEFT OUTER JOIN
+                  dbo.RENT ON dbo.CLIENT.CLIENT_ID = dbo.RENT.client_id
+WHERE  (dbo.RENT.RentDate IS NULL)
+or
+
+(RENT.RentDate <= DATEADD(month, datediff(month, 0, getdate()), 0))
+ 
+client not rent last month
+
+
+
+SELECT TOP (1) dbo.RENT.client_id, COUNT(dbo.CLIENT.CLIENT_ID) AS Expr1, dbo.CLIENT.FIRSRT_NAMEC, dbo.CLIENT.LAST_NAMEC
+FROM     dbo.RENT INNER JOIN
+                  dbo.CLIENT ON dbo.RENT.client_id = dbo.CLIENT.CLIENT_ID INNER JOIN
+                  dbo.GAME ON dbo.RENT.gameID = dbo.GAME.GAME_ID
+GROUP BY dbo.RENT.client_id, dbo.CLIENT.FIRSRT_NAMEC, dbo.CLIENT.LAST_NAMEC
+WHERE 
+(RENT.RentDate <= DATEADD(month, datediff(month, 0, getdate()), 0))
+max client rent last month
+
+
+
+SELECT TOP (1) dbo.GAME.GAME_NAME, dbo.GAME.GAME_ID
+FROM     dbo.GAME INNER JOIN
+                  dbo.RENT ON dbo.GAME.GAME_ID = dbo.RENT.gameID
+GROUP BY dbo.GAME.GAME_NAME, dbo.GAME.GAME_ID
+mostgame
+
+
+SELECT TOP (1) dbo.VENDOR.VENDRO_ID, dbo.VENDOR.FIRST_NAMEV, dbo.VENDOR.LAST_NAMEV, COUNT(dbo.devolop.devolop_id) AS maxdevolop
+FROM     dbo.VENDOR INNER JOIN
+                  dbo.devolop ON dbo.VENDOR.VENDRO_ID = dbo.devolop.vendor_id
+GROUP BY dbo.VENDOR.VENDRO_ID, dbo.VENDOR.FIRST_NAMEV, dbo.VENDOR.LAST_NAMEV
+maxdevolop
+
+
+
+
+SELECT dbo.VENDOR.FIRST_NAMEV, dbo.VENDOR.LAST_NAMEV, dbo.VENDOR.VENDRO_ID, dbo.devolop.date1
+FROM     dbo.vendor LEFT OUTER JOIN
+                  dbo.devolop ON dbo.VENDOR.VENDRO_ID = dbo.devolop.vendor_id
+WHERE  (dbo.devolop.date1 IS NULL)
+or
+
+(devolop.date1 <= DATEADD(month, datediff(month, 0, getdate()), 0))
+
+LASTMONTH
+
+
+SELECT dbo.VENDOR.FIRST_NAMEV, dbo.VENDOR.LAST_NAMEV, dbo.VENDOR.VENDRO_ID, dbo.devolop.date1
+FROM     dbo.vendor LEFT OUTER JOIN
+                  dbo.devolop ON dbo.VENDOR.VENDRO_ID = dbo.devolop.vendor_id
+WHERE  (dbo.devolop.date1 IS NULL)
+or
+
+(devolop.date1 <= DATEADD(month, datediff(year, 0, getdate()), 0))
+
+
+
+
+
+
+SELECT dbo.VENDOR.FIRST_NAMEV, dbo.VENDOR.LAST_NAMEV, dbo.VENDOR.VENDRO_ID, dbo.devolop.date1
+FROM     dbo.vendor LEFT OUTER JOIN
+                  dbo.devolop ON dbo.VENDOR.VENDRO_ID = dbo.devolop.vendor_id
+WHERE  (dbo.devolop.date1 IS NULL)
+or
+
+(devolop.date1 <= DATEADD(year, datediff(year, 0, getdate()), 0))
+last year
+
+
